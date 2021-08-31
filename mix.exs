@@ -1,8 +1,8 @@
 defmodule NervesSystemRpi3.MixProject do
   use Mix.Project
 
-  @github_organization "nerves-project"
-  @app :nerves_system_rpi3
+  @github_organization "nerves-containers"
+  @app :nerves_containers_rpi3
   @source_url "https://github.com/#{@github_organization}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
@@ -42,7 +42,8 @@ defmodule NervesSystemRpi3.MixProject do
     [
       type: :system,
       artifact_sites: [
-        {:github_releases, "#{@github_organization}/#{@app}"}
+        # {:github_releases, "#{@github_organization}/#{@app}"}
+        {:prefix, "https://nerves-containers.steffend.me/artifacts/"}
       ],
       build_runner_opts: build_runner_opts(),
       platform: Nerves.System.BR,
