@@ -54,7 +54,7 @@ defmodule NervesSystemRpi3_64.MixProject do
       # variables to the crosscompile environment. These are intended for
       # llvm-based tooling that may need more precise processor information.
       env: [
-        {"TARGET_ARCH", "arm"},
+        {"TARGET_ARCH", "aarch64"},
         {"TARGET_CPU", "cortex_a53"},
         {"TARGET_OS", "linux"},
         {"TARGET_ABI", "gnueabihf"}
@@ -67,7 +67,7 @@ defmodule NervesSystemRpi3_64.MixProject do
     [
       {:nerves, "~> 1.5.4 or ~> 1.6.0 or ~> 1.7.4", runtime: false},
       {:nerves_system_br, "1.16.5", runtime: false},
-      {:nerves_toolchain_armv7_nerves_linux_gnueabihf, "~> 1.4.3", runtime: false},
+      {:nerves_toolchain_aarch64_nerves_linux_gnu, "~> 1.4.3", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
     ]
