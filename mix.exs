@@ -57,9 +57,9 @@ defmodule NervesSystemRpi3_64.MixProject do
         {"TARGET_ARCH", "aarch64"},
         {"TARGET_CPU", "cortex_a53"},
         {"TARGET_OS", "linux"},
-        {"TARGET_ABI", "gnueabihf"},
+        {"TARGET_ABI", "gnu"},
         {"TARGET_GCC_FLAGS",
-         "-mabi=aapcs-linux -mfpu=neon-vfpv4 -marm -fstack-protector-strong -mfloat-abi=hard -mcpu=cortex-a53 -fPIE -pie -Wl,-z,now -Wl,-z,relro"}
+         "-mabi=lp64 -fstack-protector-strong -mcpu=cortex-a53 -fPIE -pie -Wl,-z,now -Wl,-z,relro"}
       ],
       checksum: package_files()
     ]
